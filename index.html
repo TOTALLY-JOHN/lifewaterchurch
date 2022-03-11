@@ -168,12 +168,29 @@
 
     <!-- 3. 실행 스크립트 -->
     <script charset="UTF-8">
-      new daum.roughmap.Lander({
-        "timestamp" : "1646995748948",
-        "key" : "29fnw",
-        "mapWidth" : "640",
-        "mapHeight" : "360"
-      }).render();
+      let width = screen.width;
+      if (width <= 440) {
+        new daum.roughmap.Lander({
+          "timestamp" : "1646995748948",
+          "key" : "29fnw",
+          "mapWidth" : "360",
+          "mapHeight" : "320"
+        }).render();
+      } else if (width > 440 && width < 639) {
+        new daum.roughmap.Lander({
+          "timestamp" : "1646995748948",
+          "key" : "29fnw",
+          "mapWidth" : "480",
+          "mapHeight" : "360"
+        }).render();
+      } else {
+        new daum.roughmap.Lander({
+          "timestamp" : "1646995748948",
+          "key" : "29fnw",
+          "mapWidth" : "640",
+          "mapHeight" : "480"
+        }).render();
+      }
     </script>
   </div>
 
